@@ -1,4 +1,4 @@
-package com.jceco.jcbooks.ui.notifications
+package com.jceco.jcbooks.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.jceco.jcbooks.databinding.FragmentNotificationsBinding
+import com.jceco.jcbooks.viewmodels.NotificationsViewModel
 
 class NotificationsFragment : Fragment() {
 
