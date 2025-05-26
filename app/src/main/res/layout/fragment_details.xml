@@ -27,4 +27,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/textview_author"
+        app:layout_constraintTop_toBottomOf="@id/textview_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:text="Título do livro"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
