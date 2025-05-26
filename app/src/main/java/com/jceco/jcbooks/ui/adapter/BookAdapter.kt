@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jceco.jcbooks.ui.viewholder.BookViewHolder
 
-class BookAdapter : RecyclerView.Adapter<BookViewHolder() {
+class BookAdapter : RecyclerView.Adapter<BookViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
