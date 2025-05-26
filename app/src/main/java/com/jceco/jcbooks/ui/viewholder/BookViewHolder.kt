@@ -7,6 +7,6 @@ import com.jceco.jcbooks.entity.Book
 class BookViewHolder(private val item: ItemBookBinding) : RecyclerView.ViewHolder(item.root) {
 
     fun bind(book: Book) {
-
+        item.textviewTitle.text = book.title
     }
 }
