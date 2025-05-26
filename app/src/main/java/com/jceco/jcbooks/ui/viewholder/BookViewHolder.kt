@@ -1,5 +1,6 @@
 package com.jceco.jcbooks.ui.viewholder
 
+import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.jceco.jcbooks.R
 import com.jceco.jcbooks.databinding.ItemBookBinding
@@ -14,7 +15,7 @@ class BookViewHolder(private val item: ItemBookBinding, private val listener: Bo
         item.textviewGenre.text = book.genre
         item.textviewAuthor.text = book.author
 
-        item.textviewTitle.setOnClickListener(this)
+        item.textviewTitle.setOnClickListener { listener.onClick(book.id) }
 
         defineBackground(book.genre)
 

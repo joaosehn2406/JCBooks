@@ -6,9 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.jceco.jcbooks.R
 import com.jceco.jcbooks.databinding.FragmentHomeBinding
 import com.jceco.jcbooks.ui.adapter.BookAdapter
+import com.jceco.jcbooks.ui.listener.BookListener
 import com.jceco.jcbooks.viewmodels.HomeViewModel
 
 class HomeFragment : Fragment() {
@@ -29,13 +32,21 @@ class HomeFragment : Fragment() {
         binding.recyclerviewBooks.layoutManager = LinearLayoutManager(context)
         binding.recyclerviewBooks.adapter = adapter
 
-
+        attachListener()
 
         viewModel.getAllBooks()
 
         setObservers()
 
         return binding.root
+    }
+
+    private fun attachListener() {
+        adapter.attachListener(object : BookListener {
+            override fun onClick(id: Int) {
+                findNavController().navigate(R.id.navigation_details)
+            }
+        })
     }
 
     override fun onDestroyView() {
