@@ -31,6 +31,8 @@ class HomeFragment : Fragment() {
 
 
         binding.recyclerviewBooks.adapter = adapter
+
+        viewModel.getAllBooks()
         return binding.root
     }
 

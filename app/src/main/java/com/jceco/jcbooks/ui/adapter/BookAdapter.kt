@@ -9,7 +9,7 @@ import com.jceco.jcbooks.ui.viewholder.BookViewHolder
 
 class BookAdapter : RecyclerView.Adapter<BookViewHolder>() {
 
-    private val bookList = mutableListOf<Book>()
+    private var bookList: List<Book> = listOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
         val view = ItemBookBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -24,5 +24,7 @@ class BookAdapter : RecyclerView.Adapter<BookViewHolder>() {
         return bookList.size
     }
 
-
+    fun updateBooks(list: List<Book>){
+        bookList = list
+    }
 }
