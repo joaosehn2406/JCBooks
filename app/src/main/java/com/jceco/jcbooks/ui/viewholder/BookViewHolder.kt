@@ -14,7 +14,7 @@ class BookViewHolder(private val item: ItemBookBinding) : RecyclerView.ViewHolde
 
         defineBackground(book.genre)
 
-        updateFavoriteIcon()
+        updateFavoriteIcon(book.favorite)
     }
 
     private fun defineBackground(genre: String) = when (genre) {
