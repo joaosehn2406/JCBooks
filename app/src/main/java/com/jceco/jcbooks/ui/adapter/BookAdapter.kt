@@ -1,27 +1,27 @@
 package com.jceco.jcbooks.ui.adapter
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.jceco.jcbooks.databinding.ItemBookBinding
+import com.jceco.jcbooks.entity.Book
 import com.jceco.jcbooks.ui.viewholder.BookViewHolder
 
 class BookAdapter : RecyclerView.Adapter<BookViewHolder>() {
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): BookViewHolder {
-        TODO("Not yet implemented")
+    private val bookList = mutableListOf<Book>()
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
+        val view = ItemBookBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return BookViewHolder(view)
     }
 
-    override fun onBindViewHolder(
-        holder: BookViewHolder,
-        position: Int
-    ) {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
+        holder.bind(bookList[position])
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return bookList.size
     }
 
 
