@@ -5,6 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.DetailsFragment">
 
-
+    <ImageView
+        android:src="@drawable/ic_arrow_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
 
 </androidx.constraintlayout.widget.ConstraintLayout>
