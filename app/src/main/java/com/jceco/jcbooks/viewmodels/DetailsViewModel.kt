@@ -1,4 +1,4 @@
-package com.jceco.jcbooks
+package com.jceco.jcbooks.viewmodels
 
 import androidx.lifecycle.ViewModel
 
