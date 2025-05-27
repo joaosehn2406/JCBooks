@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jceco.jcbooks.R
 import com.jceco.jcbooks.databinding.FragmentHomeBinding
+import com.jceco.jcbooks.helper.BookConstants
 import com.jceco.jcbooks.ui.adapter.BookAdapter
 import com.jceco.jcbooks.ui.listener.BookListener
 import com.jceco.jcbooks.viewmodels.HomeViewModel
@@ -44,7 +45,11 @@ class HomeFragment : Fragment() {
     private fun attachListener() {
         adapter.attachListener(object : BookListener {
             override fun onClick(id: Int) {
-                findNavController().navigate(R.id.navigation_details)
+
+                val bundle = Bundle()
+                bundle.putInt(BookConstants.KEY.BOOK_ID, id)
+
+                findNavController().navigate(R.id.navigation_details, bundle)
             }
         })
     }
