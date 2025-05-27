@@ -24,6 +24,7 @@ class DetailsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, b: Bundle?): View {
         _binding = FragmentDetailsBinding.inflate(inflater, container, false)
 
+        setListeners()
         setObservers()
 
         val bookId = arguments?.getInt(BookConstants.KEY.BOOK_ID) ?: 0
@@ -43,6 +44,12 @@ class DetailsFragment : Fragment() {
             binding.textviewAuthor.text = it.author
             binding.textviewGenre.text = it.genre
             binding.checkboxFavorito.isChecked = it.favorite
+        }
+    }
+
+    private fun setListeners() {
+        binding.imageviewBack.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
         }
     }
 }
