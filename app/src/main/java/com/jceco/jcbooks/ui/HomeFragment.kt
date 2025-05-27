@@ -42,6 +42,11 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.getAllBooks()
+    }
+
     private fun attachListener() {
         adapter.attachListener(object : BookListener {
             override fun onClick(id: Int) {

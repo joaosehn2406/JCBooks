@@ -11,7 +11,7 @@ class HomeViewModel : ViewModel() {
     private val _books = MutableLiveData<List<Book>>()
     val books: LiveData<List<Book>> = _books
 
-    private val respository = BookRepository()
+    private val respository = BookRepository.getInstance()
 
     fun getAllBooks() {
         _books.value = respository.getAllBooks()

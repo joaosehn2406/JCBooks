@@ -8,7 +8,7 @@ import com.jceco.jcbooks.repository.BookRepository
 
 class DetailsViewModel : ViewModel() {
 
-    private val repository: BookRepository = BookRepository()
+    private val repository: BookRepository = BookRepository.getInstance()
 
     private val _book = MutableLiveData<Book>()
     val book: LiveData<Book> = _book
