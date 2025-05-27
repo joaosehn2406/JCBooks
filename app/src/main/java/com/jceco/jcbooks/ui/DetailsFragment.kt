@@ -44,12 +44,26 @@ class DetailsFragment : Fragment() {
             binding.textviewAuthor.text = it.author
             binding.textviewGenre.text = it.genre
             binding.checkboxFavorito.isChecked = it.favorite
+
+            defineBackground(it.genre)
         }
     }
 
     private fun setListeners() {
         binding.imageviewBack.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()
+        }
+    }
+
+    private fun defineBackground(genre: String) = when (genre) {
+        "Terror" -> {
+            binding.textviewGenreValue.setBackgroundResource(R.drawable.rounded_label_red)
+        }
+        "Fantasia" -> {
+            binding.textviewGenreValue.setBackgroundResource(R.drawable.rounded_label_fantasy)
+        }
+        else -> {
+            binding.textviewGenreValue.setBackgroundResource(R.drawable.rounded_label_teal)
         }
     }
 }
