@@ -15,7 +15,7 @@
         android:id="@+id/navigation_favorite"
         android:name="com.jceco.jcbooks.ui.FavoriteFragment"
         android:label="@string/title_favorites"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_favorite" />
 
     <fragment
         android:id="@+id/navigation_details"
