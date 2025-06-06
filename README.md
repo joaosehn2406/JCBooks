@@ -79,7 +79,7 @@ O objetivo do projeto é demonstrar o uso de **Kotlin com XML**, seguindo boas p
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/joaosehn2406/app-lista-livros.git
    ```
 
 2. **Abra o projeto no Android Studio**
