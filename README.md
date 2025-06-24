@@ -105,5 +105,3 @@ Contribuições são bem-vindas! Para contribuir:
 Este projeto está sob a licença **MIT**. Veja mais em [LICENSE](https://mit-license.org/).
 
 ---
-
-**Desenvolvido com 💜 em Kotlin para quem ama livros e código!**
